@@ -4,7 +4,7 @@ function CatsCard(props) {
     return (
         <div class="max-w-md align-top inline-block mx-5 rounded-3xl overflow-hidden shadow-lg whitespace-normal">
             <div class="w-full h-[400px] bg-gray-100 overflow-hidden">
-                <img src={props.catDetails.image} alt="Sunset in the mountains" class="w-full h-full object-cover" />
+                <img src={props.catDetails.image} alt={props.catDetails.alt_names} class="w-full h-full object-cover" />
             </div>
             <div className='p-4 px-6 bg-white'>
                 <div class="">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CatsCard from '../components/CatsCard'
 import { getCatsData } from "../api/getCatsLists.js"
+import CatsSkeletonCard from '../components/CatsSkeletonCard.jsx';
 
 function CatListingPage() {
 
@@ -13,14 +14,18 @@ function CatListingPage() {
         setIsLoading(true);
         console.log(page);
 
-        const data = await getCatsData(page, 5);
-        if(catsData){
+        const data = await getCatsData(page, 4);
+        if (catsData) {
             var prevData = catsData;
+            console.log("123 Previous Data : ", prevData);
+            console.log("123 New Data : ", data.data.data);
+
             prevData.push(...data.data.data)
             setCatsData(prevData)
         }
-        else{
+        else {
             setCatsData(data.data.data)
+            setPage((page) => page + 1)
         }
         setOtherData(data.data)
         console.log(data.data)
@@ -32,13 +37,11 @@ function CatListingPage() {
         if (remainingWidth <= 500) {
 
             if (otherData.nextPage) {
+
                 setPage((page) => page + 1)
 
                 // calling the function to load other data 
                 fetchData();
-            }
-            else{
-                alert("All Data Fetched !!")
             }
 
         }
@@ -50,13 +53,18 @@ function CatListingPage() {
     }, [])
 
     return (
-        <div className="p-9 catListingPage flex-col items-center justify-center h-full">
+        <div className={`p-9 catListingPage flex-col items-center justify-center ${isLoading ? 'h-screen' : 'h-full'}`}>
             <div className="text-5xl mb-7 font-bold text-white">Cats around us</div>
             <div className="horizontalScrolling overflow-x-auto overflow-y-hidden whitespace-nowrap no-scrollbar" onScroll={checkScroll}>
                 {console.log(catsData)}
                 {catsData && catsData.map((data) => (
                     <CatsCard catDetails={data} key={data.id} />
                 ))}
+                {
+                    isLoading && <div className='inline mr-3'>
+                        <CatsSkeletonCard />
+                    </div>
+                }
             </div>
         </div>
     )
