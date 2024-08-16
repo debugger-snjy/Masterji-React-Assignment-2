@@ -11,9 +11,9 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import './index.css'
 
 // Importing the Pages
-import RandomUserPage from './pages/randomUserPage'
-import RandomJokesPage from './pages/randomJokesPage'
-import CatListingPage from './pages/catListingPage'
+import RandomUserPage from './pages/RandomUserPage'
+import RandomJokesPage from './pages/RandomJokesPage'
+import CatListingPage from './pages/CatListingPage'
 
 // Created router and all its path 
 const myMasterjiRouter = createBrowserRouter(

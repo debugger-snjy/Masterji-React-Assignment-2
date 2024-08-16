@@ -5,7 +5,7 @@ import axios from "axios"
 import { catsListingAPI } from "../utils/constants.js"
 
 // Function to get the Jokes Data From the API
-export async function getJokesData(page, limit) {
+export async function getCatsData(page, limit) {
 
     try {
         // Using the axios function to get the data
