@@ -1,6 +1,6 @@
 # React MasterJi Assignment [ COMPLETED 🎉 ]
 
-An React Assignment by [chaiaurcode.com](https://chaiaurcode.com)
+An React Assignment by [chaicode.com](https://chaicode.com)
 
 ## Pages Folder
 
