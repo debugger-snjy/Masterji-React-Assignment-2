@@ -70,88 +70,88 @@ function JokesCard(props) {
     console.log(jokeData);
 
     if (loadingState) {
-    return (
-        <div class="bg-black p-10 pb-7 border-1 border-white rounded-3xl shadow">
+        return (
+            <div class="bg-black p-10 pb-7 border-1 border-white rounded-3xl shadow">
 
-            {/* Header Details */}
-            <div className="flex items-center gap-5">
-                <ArrowLeft stroke='white' height={"30px"} width={"30px"} />
-                <span className='text-3xl font-semibold text-white'>
-                    Post
-                </span>
-            </div>
+                {/* Header Details */}
+                <div className="flex items-center gap-5">
+                    <ArrowLeft stroke='white' height={"30px"} width={"30px"} />
+                    <span className='text-3xl font-semibold text-white'>
+                        Post
+                    </span>
+                </div>
 
-            {/* Elon Musk Data and Options Icon */}
-            <div class="flex justify-between items-center">
+                {/* Elon Musk Data and Options Icon */}
+                <div class="flex justify-between items-center">
 
-                {/* Elon Musk Images and Details */}
-                <div class="mt-5 flex gap-3 items-start">
+                    {/* Elon Musk Images and Details */}
+                    <div class="mt-5 flex gap-3 items-start">
 
-                    {/* Elon Image and Twitter Name with id */}
-                    <div class="w-16 h-16 bg-gray-500 rounded-full animate-pulse"></div>
-                    <div class="flex flex-col">
-                        <div class="flex font-bold text-3xl">
-                            <span class="text-white animate-pulse"></span>
-                            <div class="ml-1 h-5 w-5 bg-gray-500 rounded-full animate-pulse"></div>
+                        {/* Elon Image and Twitter Name with id */}
+                        <div class="w-16 h-16 bg-gray-500 rounded-full animate-pulse"></div>
+                        <div class="flex flex-col">
+                            <div class="flex font-bold text-3xl">
+                                <span class="text-white animate-pulse"></span>
+                                <div class="h-7 w-[300px] bg-gray-500 rounded-md animate-pulse"></div>
+                            </div>
+                            <div class="text-gray-300 text-xl bg-gray-500 mt-2 rounded-md h-5 w-[300px] animate-pulse"></div>
                         </div>
-                        <div class="text-gray-300 text-xl animate-pulse">@elonmusk</div>
+
                     </div>
 
+                    {/* Adding the Options Button */}
+                    <div class="h-6 w-6 bg-gray-500 rounded-full animate-pulse"></div>
                 </div>
 
-                {/* Adding the Options Button */}
-                <div class="h-6 w-6 bg-gray-500 rounded-full animate-pulse"></div>
-            </div>
+                {/* Adding the Joke */}
+                <div class="text-white text-xl mt-4 text-wrap text-justify w-full tracking-tight">
+                    <div class="h-3 bg-gray-500 rounded animate-pulse"></div>
+                    <div class="h-3 bg-gray-500 rounded mt-1 animate-pulse"></div>
+                    <div class="h-2 bg-gray-500 rounded mt-1 animate-pulse"></div>
+                </div>
 
-            {/* Adding the Joke */}
-            <div class="text-white text-xl mt-4 text-wrap text-justify w-full tracking-tight">
-                <div class="h-3 bg-gray-500 rounded animate-pulse"></div>
-                <div class="h-3 bg-gray-500 rounded mt-1 animate-pulse"></div>
-                <div class="h-2 bg-gray-500 rounded mt-1 animate-pulse"></div>
-            </div>
+                {/* Adding the Analytics */}
+                <div class="flex text-[#A0A0A0] text-md mt-7 gap-0 items-center">
+                    <div class="h-4 w-14 bg-gray-500 rounded animate-pulse"></div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot"><circle cx="12.1" cy="12.1" r="1" /></svg>
+                    </div>
+                    <div class="h-4 w-14 bg-gray-500 rounded animate-pulse"></div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot"><circle cx="12.1" cy="12.1" r="1" /></svg>
+                    </div>
+                    <div class="h-4 w-14 bg-gray-500 rounded animate-pulse"></div>
+                </div>
 
-            {/* Adding the Analytics */}
-            <div class="flex text-[#A0A0A0] text-md mt-7 gap-0 items-center">
-                <div class="h-4 w-14 bg-gray-500 rounded animate-pulse"></div>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot"><circle cx="12.1" cy="12.1" r="1" /></svg>
+                {/* Adding the Likes, Comments, Tweet, saved and share buttons with their numbers */}
+                <div class="mt-5 flex p-5 text-sm text-[#71767B] border border-x-0 border-y-1 border-white/15 gap-10 justify-between items-center">
+                    <div class="flex gap-2">
+                        <img src={commentsIcon} alt="Comments Icon" class="w-[23px] h-[23px] rounded-full " />
+                        <span class="w-10 bg-gray-500 rounded-lg animate-pulse"> </span>
+                    </div>
+                    <div class="flex gap-2">
+                        <img src={retweetIcon} alt="Retweet Icon" class="w-[23px] h-[23px] rounded-full " />
+                        <span class="w-10 bg-gray-500 rounded-lg animate-pulse"> </span>
+                    </div>
+                    <div class="flex gap-2">
+                        <img src={likesIcon} alt="Likes Icon" class="w-[23px] h-[23px] rounded-full " />
+                        <span class="w-10 bg-gray-500 rounded-lg animate-pulse"> </span>
+                    </div>
+                    <div class="flex gap-2">
+                        <img src={savedIcon} alt="Saved Icon" class="w-[23px] h-[23px] rounded-full " />
+                        <span class="w-10 bg-gray-500 rounded-lg animate-pulse"> </span>
+                    </div>
+                    <div class="">
+                        <img src={shareIcon} alt="Share Icon" class="w-[23px] h-[23px] rounded-full " />
+                    </div>
                 </div>
-                <div class="h-4 w-14 bg-gray-500 rounded animate-pulse"></div>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot"><circle cx="12.1" cy="12.1" r="1" /></svg>
-                </div>
-                <div><span class="text-white font-bold animate-pulse">123</span> Views</div>
-            </div>
 
-            {/* Adding the Likes, Comments, Tweet, saved and share buttons with their numbers */}
-            <div class="mt-5 flex p-5 text-sm text-[#71767B] border border-x-0 border-y-1 border-white/15 gap-10 justify-between items-center">
-                <div class="flex gap-2">
-                    <img src="comments-icon.svg" alt="Comments Icon" class="w-[23px] h-[23px] bg-gray-500 rounded-full animate-pulse" />
-                    <span class="animate-pulse">12K</span>
-                </div>
-                <div class="flex gap-2">
-                    <img src="retweet-icon.svg" alt="Retweet Icon" class="w-[23px] h-[23px] bg-gray-500 rounded-full animate-pulse" />
-                    <span class="animate-pulse">9K</span>
-                </div>
-                <div class="flex gap-2">
-                    <img src="likes-icon.svg" alt="Likes Icon" class="w-[23px] h-[23px] bg-gray-500 rounded-full animate-pulse" />
-                    <span class="animate-pulse">23K</span>
-                </div>
-                <div class="flex gap-2">
-                    <img src="saved-icon.svg" alt="Saved Icon" class="w-[23px] h-[23px] bg-gray-500 rounded-full animate-pulse" />
-                    <span class="animate-pulse">5K</span>
-                </div>
-                <div class="">
-                    <img src="share-icon.svg" alt="Share Icon" class="w-[23px] h-[23px] bg-gray-500 rounded-full animate-pulse" />
+                {/* Adding the chaiaurcode copyright */}
+                <div class="mt-5 mb-0 flex justify-center items-center text-[#71767B]">
+                    <div>© chai aur code</div>
                 </div>
             </div>
-
-            {/* Adding the chaiaurcode copyright */}
-            <div class="mt-5 mb-0 flex justify-center items-center text-[#71767B]">
-                <div>© chai aur code</div>
-            </div>
-        </div>
-    )
+        )
     }
 
     return (

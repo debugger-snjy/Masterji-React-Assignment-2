@@ -54,7 +54,7 @@ function CatListingPage() {
     }, [])
 
     return (
-        <div className={`p-9 catListingPage flex-col items-center justify-center ${isLoading ? 'h-screen' : 'h-full'}`}>
+        <div className={`p-9 catListingPage flex-col items-center justify-center h-screen`}>
             <div className="text-5xl mb-7 font-bold text-white">Cats around us</div>
             <div className="horizontalScrolling overflow-x-auto overflow-y-hidden whitespace-nowrap no-scrollbar" onScroll={checkScroll}>
                 {console.log(catsData)}
