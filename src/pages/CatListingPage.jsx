@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CatsCard from '../components/CatsCard'
 import { getCatsData } from "../api/getCatsLists.js"
 import CatsSkeletonCard from '../components/CatsSkeletonCard.jsx';
+import chaiAurCodeIcon from "../assets/chaiAurCodeIcon.png"
 
 function CatListingPage() {
 
@@ -66,6 +67,7 @@ function CatListingPage() {
                     </div>
                 }
             </div>
+            <a href="https://chaicode.com" target='_blank'><img src={chaiAurCodeIcon} className='absolute top-3 right-3 w-20 h-20' alt="Chai Aur Code Icon" /></a>
         </div>
     )
 }
