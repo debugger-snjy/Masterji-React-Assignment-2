@@ -6,9 +6,15 @@
 @tailwind utilities;
 
 
-.userPage{
+.userPage {
     background-image: url('./assets/randomUser.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100%;
+    background-size: cover;
+}
+
+.jokePage {
+    background-image: url('./assets/randomJokesBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
