@@ -6,6 +6,23 @@
 @tailwind utilities;
 
 
+/* Adding the code for no scrollbar */
+@layer utilities {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}
+
 .userPage {
     background-image: url('./assets/randomUser.png');
     background-repeat: no-repeat;
@@ -15,6 +32,13 @@
 
 .jokePage {
     background-image: url('./assets/randomJokesBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.catListingPage {
+    background-color: #00000060;
+    background-image: url('./assets/catListingBgDesign.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
