@@ -1,10 +1,39 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 
 function CatsCard(props) {
+
+    const [isLoaded, setIsLoaded] = useState(false);
+    const imgRef = useRef(null);
+
+    const handleImageLoad = () => {
+        setIsLoaded(true);
+    };
+
+    const handleImageError = () => {
+        // Handle error, e.g., log error, display error message
+        console.error('Image failed to load');
+    };
+
     return (
         <div class="max-w-md align-top inline-block mx-5 rounded-3xl overflow-hidden shadow-lg whitespace-normal">
             <div class="w-full h-[400px] bg-gray-100 overflow-hidden">
-                <img src={props.catDetails.image} alt={props.catDetails.alt_names} class="w-full h-full object-cover" />
+                <img className='w-full h-full object-cover' src={props.catDetails.image} alt={props.catDetails.alt_names} effect="blur" />
+                {
+                    !isLoaded && (
+                        <div className="w-full h-full bg-gray-400 animate-pulse"></div>
+                    )
+                }
+                {
+                    isLoaded && (
+                        <img
+                            src={props.catDetails.image} alt={props.catDetails.alt_names}
+                            className="object-cover w-full h-full"
+                            onLoad={handleImageLoad}
+                            onError={handleImageError}
+                            ref={imgRef}
+                        />
+                    )
+                }
             </div>
             <div className='p-4 px-6 bg-white'>
                 <div class="">
